@@ -1,0 +1,62 @@
+Build and deploy a cloud native e commerce application made up of multiple microservices each running in its  own Docker container  orchestrated by kubernetes and managed by jenkins CI/CD  Pipeline
+
+Architecture overview
+
+                                       CloudCart
+_________________________________________________________________________________________________________
+Auth services                      product services                 order services
+
+_________________________________________________________________________________________________________
+          
+                       All services Communities via REST API'S
+_________________________________________________________________________________________________________
+                        Docker + Jenkins +Kubernetes minikube
+________________________________________________________________________________________________________
+
+
+Each services is independent .has its onw :
+
+Code base
+DateBAse
+Docker file 
+Deployment YAML
+Jenkins pipeline
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Tech Stack
+
+Languages                                           Python 
+Containerixation                                    Docker
+CI/CD                                               jenkins
+Orchestration                                       Kubernetes (minikube)
+Source control                                      Git hub
+Monitoring                                          Prometheus + grafana
+Communication                                       Rest api's
+Data BASE                                           SQL OR mongo db
+
+
+_________________________________________________________________________________________________________________________
+
+Micro services overview
+
+Services                    Description                      Example endpoint
+
+Auth-services             handles user registration and login   /register ,/login 
+
+product-services         manages product catalog                /product ,/product/<id>
+
+order-services          Handles order place ment and            /order,/order/<id>
+                        retrieval 
+
+_____--------------------------------------___________________________________________-----------------------___________
+
+How it works :
+
+1. User signs up / login -> auth-services  validates and issues a token
+2. User browses produckts -> Product -services fetches list
+3. User places order -> order-service stores order details and confirms
+
+Each service exposes Rest api and the frontend (optional) can call then independently 
+
+
