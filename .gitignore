@@ -1,0 +1,57 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Flask / Python env files
+*.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# Docker
+*.tar
+docker-compose.override.yml
+docker-compose.*.yml
+**/Dockerfile.local
+
+# Jenkins
+*.secret
+credentials.xml
+secrets/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars  # sensitive variables like keys, passwords
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Node / frontend (if any)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Backup / Temp
+*.bak
+*.tmp
